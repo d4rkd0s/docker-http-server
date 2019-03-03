@@ -10,7 +10,6 @@ FROM scratch
 # set port environment variable with default value
 ENV HTTP_SERVER_PORT 8043
 ENV PUBLIC_FOLDER_PATH "/srv/http"
-WORKDIR $PUBLIC_FOLDER_PATH
 
 # get the binary
 WORKDIR /

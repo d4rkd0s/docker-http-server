@@ -5,8 +5,10 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -45,6 +47,22 @@ func main() {
 	// sanity check
 	if len(*setBasicAuth) != 0 && !*basicAuth {
 		*basicAuth = true
+	}
+
+	// read environment variables
+	if (len(os.Getenv("HTTP_SERVER_PORT")) > 0) {
+		var myPort = os.Getenv("HTTP_SERVER_PORT")
+		ret, err := strconv.Atoi(myPort)
+		if err != nil {
+			panic(fmt.Sprintf("some error"))
+		}
+		portPtr = &ret
+	}
+
+	// read environment variables
+	if (len(os.Getenv("PUBLIC_FOLDER_PATH")) > 0) {
+		var myPath = os.Getenv("PUBLIC_FOLDER_PATH")
+		 path = &myPath
 	}
 
 	port := ":" + strconv.FormatInt(int64(*portPtr), 10)

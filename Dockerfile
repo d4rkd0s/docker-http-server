@@ -8,8 +8,8 @@ RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -tags netgo -installsuffix ne
 FROM scratch
 
 # set port environment variable with default value
-ENV HTTP_SERVER_PORT 8043
-ENV PUBLIC_FOLDER_PATH "/srv/http"
+ENV HTTP_SERVER_PORT 4200
+ENV PUBLIC_FOLDER_PATH "/public"
 
 # get the binary
 WORKDIR /

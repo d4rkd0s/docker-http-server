@@ -18,7 +18,7 @@ var (
 	portPtr                  = flag.Int("port", 8043, "The listening port")
 	context                  = flag.String("context", "", "The 'context' path on which files are served, e.g. 'doc' will serve the files at 'http://localhost:<port>/doc/'")
 	path                     = flag.String("path", "/srv/http", "The path for the static files")
-	fallbackPath             = flag.String("fallback", "", "Default relative to be used when no file requested found. E.g. /index.html")
+	fallbackPath             = flag.String("fallback", "/index.html", "Default relative to be used when no file requested found. E.g. /index.html")
 	headerFlag               = flag.String("append-header", "", "HTTP response header, specified as `HeaderName:Value` that should be added to all responses.")
 	basicAuth                = flag.Bool("enable-basic-auth", false, "Enable basic auth. By default, password are randomly generated. Use --set-basic-auth to set it.")
 	setBasicAuth             = flag.String("set-basic-auth", "", "Define the basic auth. Form must be user:password")

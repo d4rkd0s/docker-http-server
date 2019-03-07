@@ -15,4 +15,4 @@ ENV PUBLIC_FOLDER_PATH "/public"
 WORKDIR /
 COPY --from=builder /go/src/github.com/PierreZ/goStatic/goStatic .
 
-ENTRYPOINT ["/goStatic", "-fallback /index.html"]
+ENTRYPOINT ["/goStatic"]

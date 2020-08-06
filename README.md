@@ -1,6 +1,6 @@
 ### Usage
 
-- Port env variable: `HTTP_SERVER_PORT` default `4200`
+- Port env variable: `HTTP_SERVER_PORT` default `8043`
 - Public folder env variable: `PUBLIC_FOLDER_PATH` default `/public`
 - Default fallback set to `/index.html`
 
